@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: gaming-center-api
+    env: docker
+    repo: https://github.com/JlassiHoussem/gaming_center_backend.git
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /swagger-ui.html
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://mysql-b6e4a8f-jalsonhossem-a4c4.c.aivencloud.com:14680/defaultdb?createDatabaseIfNotExist=true&useSSL=true&requireSSL=true&serverTimezone=UTC
+      - key: DB_USERNAME
+        value: avnadmin
+      - key: DB_PASSWORD
